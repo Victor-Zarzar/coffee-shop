@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { UserButton, SignInButton, SignedIn, SignedOut } from '@clerk/nextjs'
 import Cart from '../Cart/Cart';
+import { Button } from 'rsuite';
 
 export default function Navbar() {
   return (
@@ -23,15 +24,15 @@ export default function Navbar() {
         </div>
       </div>
       <div className='flex items-center gap-8 relative'>
-      <Cart />
+        <Cart />
         <SignedIn>
           <UserButton />
         </SignedIn>
         <SignedOut>
           <SignInButton mode='modal'>
-            <button className='border rounded-md bg-stone-400 border-gray-400 text-white px-3 py-2'>
+            <Button className='border rounded-md bg-stone-400 hover:bg-stone-400 border-gray-400 text-white px-6 py-2.5'>
               Login
-            </button>
+            </Button>
           </SignInButton>
         </SignedOut>
       </div>

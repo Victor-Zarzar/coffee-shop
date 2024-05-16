@@ -14,7 +14,7 @@ export default function NavMenu() {
                     <Nav.Item>Prensa Francesa</Nav.Item>
                     <Nav.Item>Passador</Nav.Item>
                 </Nav.Menu>
-                <Nav.Menu title="Acessórios">
+                <Nav.Menu title="Acessórios" className=''>
                     <Nav.Item>Chaleiras</Nav.Item>
                     <Nav.Item>Canecas e Xícaras</Nav.Item>
                     <Nav.Item>Moedores de Café</Nav.Item>
