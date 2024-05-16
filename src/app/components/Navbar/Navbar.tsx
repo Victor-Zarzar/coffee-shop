@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { UserButton, SignInButton, SignedIn, SignedOut } from '@clerk/nextjs'
+import Cart from '../Cart/Cart';
 
 export default function Navbar() {
   return (
@@ -22,12 +23,13 @@ export default function Navbar() {
         </div>
       </div>
       <div className='flex items-center gap-8 relative'>
+      <Cart />
         <SignedIn>
           <UserButton />
         </SignedIn>
         <SignedOut>
           <SignInButton mode='modal'>
-            <button className='border rounded-md bg-slate-600 border-gray-400 text-white px-3 py-2'>
+            <button className='border rounded-md bg-stone-400 border-gray-400 text-white px-3 py-2'>
               Login
             </button>
           </SignInButton>
