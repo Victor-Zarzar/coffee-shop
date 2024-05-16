@@ -3,6 +3,7 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import 'rsuite/dist/rsuite-no-reset.min.css';
 import LayoutProvider from "./components/Layout/Layout";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const JetBrains = JetBrains_Mono({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClerkProvider>
     <html lang="en">
        <body className={JetBrains.className}>
         <LayoutProvider>
@@ -24,5 +26,6 @@ export default function RootLayout({
         </LayoutProvider>
       </body>
     </html>
+    </ClerkProvider>
   );
 }
