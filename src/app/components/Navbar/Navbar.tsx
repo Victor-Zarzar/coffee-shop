@@ -6,7 +6,7 @@ import { UserButton, SignInButton, SignedIn, SignedOut } from '@clerk/nextjs'
 
 export default function Navbar() {
   return (
-    <nav className='fixed top-0 w-full h-28 flex items-center py-2 px-8 justify-between z-50 bg-stone-300 text-gray-400'>
+    <nav className='fixed top-0 w-full h-28 flex items-center py-2 px-8 justify-between z-50 bg-slate-200 text-gray-400'>
       <div className="md:flex items-center justify-between py-5 md:px-10 px-6">
         <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
           <Image
