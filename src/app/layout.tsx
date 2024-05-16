@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import 'rsuite/dist/rsuite-no-reset.min.css';
+import LayoutProvider from "./components/Layout/Layout";
 
-const inter = Inter({ subsets: ["latin"] });
+const JetBrains = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Coffee Shop - Empório Betim",
@@ -17,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+       <body className={JetBrains.className}>
+        <LayoutProvider>
+          {children}
+        </LayoutProvider>
+      </body>
     </html>
   );
 }
